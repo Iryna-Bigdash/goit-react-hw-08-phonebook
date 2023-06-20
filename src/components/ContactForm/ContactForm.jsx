@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Form, Label, InputForm, BtnForm } from './ContactForm.styled';
-import { getContacts } from 'redux/selectors';
+import { getContacts } from 'redux/contacts/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 
 export default function ContactForm() {
   const initialState = { name: '', number: '' };

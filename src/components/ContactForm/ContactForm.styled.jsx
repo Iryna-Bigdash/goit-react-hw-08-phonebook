@@ -1,22 +1,5 @@
 import styled from '@emotion/styled';
 
-
-
-// export const BtnForm = styled.button`
-//   width: 150px;
-//   background-color: #8b54c1;
-//   font-size: 25px;
-//   color: white;
-//   border: none;
-//   border-radius: 5%;
-//   cursor: pointer;
-
-//   &&:hover{
-//     border: 1px solid white;
-//   }
-// `;
-
-
 const Form = styled.form`
   display: flex;
   justify-content: center;
