@@ -87,7 +87,7 @@ function Header() {
 
             <Navigation />
             {isLoggedIn ? <UserMenu /> : <AuthNav />}
-            <ThemeSwitcher /> {/* Add ThemeSwitcher component */}
+            <ThemeSwitcher />
           </Toolbar>
         </Container>
       </AppBar>
