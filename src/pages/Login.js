@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import { LoginForm } from 'components/LogicForm/LogicForm';
+import { LoginForm } from 'components/LoginForm/LoginForm';
 
 export default function Login() {
   return (
@@ -11,3 +11,11 @@ export default function Login() {
     </div>
   );
 }
+
+
+
+
+
+
+
+

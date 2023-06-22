@@ -37,10 +37,10 @@ export default function ContactList() {
 
   return (
     <ContactsList>
-      {filteredContacts().map(({ id, name, phone }) => (
+      {filteredContacts().map(({ id, name, number }) => (
         <ContactsItem key={id}>
           <ContactsContainer>{name}:</ContactsContainer>
-          <PhoneContainer>{phone}</PhoneContainer>
+          <PhoneContainer>{number}</PhoneContainer>
           <DeleteContactBtn onClick={() => handleDeleteContact(id)}>
             Delete
           </DeleteContactBtn>
