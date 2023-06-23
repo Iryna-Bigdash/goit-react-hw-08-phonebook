@@ -1,43 +1,29 @@
 import styled from '@emotion/styled';
 
-const Form = styled.form`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 20px;
+const ContactFormContainer = styled.div`
+  padding: 40px;
+  text-align: center;
+`;
+
+const ContactFormTitle = styled.h2`
   margin-bottom: 20px;
-  border-color: white;
-  background-color: #8b54c1;
-`;
-
-const Label = styled.label`
-  margin-right: 10px;
-  font-weight: bold;
-  color: white;
-`;
-
-const InputForm = styled.input`
-  padding: 10px;
-  margin-right: 10px;
-  font-size: 25px;
+  color: purple;
 `;
 
 const BtnForm = styled.button`
-  width: 180px;
-  padding: 10px;
-  background-color: #8b54c1;
-  font-size: 25px;
-  color: white;
-  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #8b54c1;
+  border: 1px solid #8b54c1;
+  background-color: inherit;
+  padding: 6px;
   border-radius: 5%;
-  cursor: pointer; 
-   &&:hover{
-    border: 1px solid white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  &:focus,
+  &:hover {
+    color: purple;
   }
 `;
 
-
-export { Form, Label, InputForm, BtnForm };
-
-
+export { ContactFormContainer, ContactFormTitle, BtnForm };

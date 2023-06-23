@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useFormik } from 'formik';
 import FilledInput from '@mui/material/FilledInput';
 import styled from '@emotion/styled';
-import { FormContainer, StyledForm, Title } from './LoginForm.styled';
+import { FormContainer, StyledForm, SubmitButton, Title } from './LoginForm.styled';
 
 
 const InputLabel = styled.label`
@@ -33,23 +33,6 @@ const ErrorMessage = styled.div`
   color: red;
   margin-bottom: 15px;
   font-size: 14px;
-`;
-
-const SubmitButton = styled.button`
-  width: 180px;
-  padding: 8px;
-  align-self: center;
-  font-size: 20px;
-  color: #8b54c1;
-  border: none;
-  border-radius: 5%;
-  background-color: white;
-  cursor: pointer; 
-  transition: background-color 0.3s ease-in-out;
-      &:focus,
-      &:hover {
-        background-color: #e7e6e6;
-      }
 `;
 
 

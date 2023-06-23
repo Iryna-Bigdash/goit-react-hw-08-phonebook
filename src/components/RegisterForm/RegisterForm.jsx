@@ -7,7 +7,6 @@ import FilledInput from '@mui/material/FilledInput';
 import styled from '@emotion/styled';
 import { FormContainer, StyledForm, Title } from './RegisteerForm.styled';
 
-
 const InputLabel = styled.label`
   margin-bottom: 5px;
   padding: 4px;
@@ -15,7 +14,7 @@ const InputLabel = styled.label`
 `;
 
 const InputField = styled(FilledInput)`
- padding: 4px;
+  padding: 4px;
   width: 100%;
   background-color: white;
 
@@ -44,12 +43,12 @@ const SubmitButton = styled.button`
   border: none;
   border-radius: 5%;
   background-color: white;
-  cursor: pointer; 
+  cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-      &:focus,
-      &:hover {
-        background-color: #e7e6e6;
-      }
+  &:focus,
+  &:hover {
+    background-color: #e7e6e6;
+  }
 `;
 
 export const RegisterForm = () => {
@@ -74,7 +73,9 @@ export const RegisterForm = () => {
 
       if (!values.email) {
         errors.email = 'Required';
-      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+      } else if (
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+      ) {
         errors.email = 'Invalid email address';
       }
 

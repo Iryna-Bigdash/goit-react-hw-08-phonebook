@@ -1,6 +1,6 @@
 
 import { setFilter } from 'redux/contacts/filtersSlice';
-import { FilterLabel, FilterInput } from './Filter.styled'; 
+import { FilterLabel, FilterInput, FilterForm } from './Filter.styled'; 
 import { useDispatch } from 'react-redux';
 
 export default function Filter() {
@@ -10,7 +10,7 @@ export default function Filter() {
     dispatch(setFilter(e.target.value));
   };
   return (
-    <>
+    <FilterForm>
       <FilterLabel htmlFor="1">Find contacts by name</FilterLabel>
       <FilterInput
         id="1"
@@ -19,6 +19,6 @@ export default function Filter() {
         title="Use this field to filter contacts by contact's name"
         onChange={handleChangeFilter}
       />
-    </>
+    </FilterForm>
   );
 }

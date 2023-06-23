@@ -36,7 +36,7 @@ export const DeleteContactBtn = styled.button`
    cursor: pointer;
    color: #8b54c1;
    font-weight: 800;
-   font-size: 23px;
+   font-size: 18px;
 
    &&:hover{
     background-color: white;

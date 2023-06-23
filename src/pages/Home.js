@@ -1,3 +1,5 @@
+
+
 const styles = {
     container: {
       minHeight: 'calc(100vh - 50px)',
@@ -14,13 +16,11 @@ const styles = {
   
   export default function Home() {
     return (
-      <div style={styles.container}>
+      <div style={{textAlign: 'center'}}>
         <h1 style={styles.title}>
           Contacts manager welcome page{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
         </h1>
       </div>
     );
-  }
+  }    
+

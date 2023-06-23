@@ -1,7 +1,7 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { contactsReducer } from "./contacts/contactsSlice";
-import { filtersReducer } from "./contacts/filtersSlice";
-import themeReducer  from "./contacts/themeSlice";
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { contactsReducer } from './contacts/contactsSlice';
+import { filtersReducer } from './contacts/filtersSlice';
+import themeReducer from './contacts/themeSlice';
 
 import {
   persistStore,
@@ -24,7 +24,6 @@ const middleware = [
   }),
 ];
 
-
 const authPersistConfig = {
   key: 'auth',
   storage,
@@ -43,4 +42,3 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
