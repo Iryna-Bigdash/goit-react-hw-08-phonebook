@@ -11,7 +11,6 @@ const HomePage = lazy(() => import('pages/Home'));
 const RegisterPage = lazy(() => import('pages/Register'));
 const LoginPage = lazy(() => import('pages/Login'));
 const ContactsPage = lazy(() => import('pages/Contacts'));
-const NewPrivatePage = lazy(() => import('pages/ContactsPrivatePage'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -28,16 +27,6 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-
-          <Route
-            path="/new-private"
-            element={
-              <PrivateRoute
-                redirectTo="/login"
-                component={<NewPrivatePage />}
-              />
-            }
-          />
 
           <Route
             path="/register"

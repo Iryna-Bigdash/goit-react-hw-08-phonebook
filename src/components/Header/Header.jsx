@@ -53,9 +53,9 @@ const Header = () => {
                 }}
               >
                 <PrivateRoute
-                  path="/new-private"
+                  path="/contacts"
                   redirectTo="/login"
-                  component={<Link to="/new-private">Contacts</Link>}
+                  component={<Link to="/contacts">Contacts</Link>}
                 />
                 <UserMenu />
               </div>

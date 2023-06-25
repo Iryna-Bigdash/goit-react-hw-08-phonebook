@@ -31,6 +31,7 @@ const FormField = styled.div`
   }
 `;
 
+
 export default function ContactForm() {
   const initialState = { name: '', number: '' };
   const contacts = useSelector(getContacts);
@@ -92,7 +93,7 @@ export default function ContactForm() {
             />
           </FormField>
 
-          <BtnForm type="submit" disabled={contacts.length === 0}>
+          <BtnForm type="submit">
             Add contact
           </BtnForm>
         </Form>
