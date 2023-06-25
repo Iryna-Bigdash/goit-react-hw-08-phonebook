@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setTheme } from 'redux/contacts/themeSlice';
 import { IconButton } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { setTheme } from 'redux/contacts/themeSlice';
 
 const ThemeSwitcher = () => {
   const dispatch = useDispatch();
@@ -14,15 +14,17 @@ const ThemeSwitcher = () => {
     dispatch(setTheme(newTheme));
   };
 
+  const themeIcon = currentTheme === 'light' ? (
+    <Brightness4Icon className="theme-icon" />
+  ) : (
+    <Brightness7Icon className="theme-icon" />
+  );
+
   return (
     <IconButton color="inherit" onClick={toggleTheme}>
-      {currentTheme === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
+      {themeIcon}
     </IconButton>
   );
 };
 
 export default ThemeSwitcher;
-
-
-
-
