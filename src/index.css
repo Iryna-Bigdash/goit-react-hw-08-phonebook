@@ -13,3 +13,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root[data-theme='light'] {
+  background-color: #ffffff;
+}
+
+:root[data-theme='dark'] {
+  background-color: #463f46;
+}
+
+:root[data-theme='dark'] input {
+  background-color: #645c64;
+  border: none;
+}
+
+:root[data-theme='dark'] label {
+  color: #f5f6f7;
+  margin-bottom: 14px;
+}

@@ -20,6 +20,11 @@ const ThemeSwitcher = () => {
     <Brightness7Icon className="theme-icon" />
   );
 
+  React.useEffect(() => {
+    document.documentElement.dataset.theme = currentTheme
+    localStorage.setItem('theme', currentTheme)
+  }, [ currentTheme ])
+
   return (
     <IconButton color="inherit" onClick={toggleTheme}>
       {themeIcon}

@@ -25,6 +25,7 @@ const Header = () => {
   };
 
   return (
+    <>
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: '#8b54c1' }}>
         <Container maxWidth="xl">
@@ -67,7 +68,7 @@ const Header = () => {
         </Container>
       </AppBar>
     </Box>
+    </>
   );
 };
-
 export default Header;
