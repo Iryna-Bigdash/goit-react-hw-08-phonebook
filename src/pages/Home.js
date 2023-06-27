@@ -1,4 +1,6 @@
-
+import PostsList from "features/post/PostsList";
+import AddPostForm from "features/post/AddPostForm";
+import { useAuth } from "hooks/hooks";
 
 const styles = {
     container: {
@@ -15,11 +17,17 @@ const styles = {
   };
   
   export default function Home() {
+    const { isLoggedIn } = useAuth();
     return (
       <div style={{textAlign: 'center'}}>
         <h1 style={styles.title}>
           Contacts manager welcome page{' '}
         </h1>
+        {isLoggedIn ? (
+          <>
+        <AddPostForm/>
+        < PostsList />
+        </>) : < PostsList />}
       </div>
     );
   }    
