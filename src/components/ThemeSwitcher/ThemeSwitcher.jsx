@@ -15,9 +15,9 @@ const ThemeSwitcher = () => {
   };
 
   const themeIcon = currentTheme === 'light' ? (
-    <Brightness4Icon className="theme-icon" />
-  ) : (
     <Brightness7Icon className="theme-icon" />
+  ) : (
+    <Brightness4Icon className="theme-icon" style={{color: 'black'}} />
   );
 
   React.useEffect(() => {
@@ -33,3 +33,6 @@ const ThemeSwitcher = () => {
 };
 
 export default ThemeSwitcher;
+
+
+

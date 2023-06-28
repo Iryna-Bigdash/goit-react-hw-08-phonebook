@@ -1,10 +1,9 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
-import AdbIcon from '@mui/icons-material/Adb';
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import { useAuth } from 'hooks/hooks';
 import { Navigation } from 'components/Navigation/Navigation';
 import { UserMenu } from 'components/UserMenu/UserMenu';
@@ -25,32 +24,21 @@ const Header = () => {
   };
 
   return (
-    <>
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: '#8b54c1' }}>
         <Container maxWidth="xl">
-          <Toolbar
-            disableGutters
-            sx={{ justifyContent: 'space-between', width: '100%' }}
-          >
-            <div
-              style={{
-                marginRight: '10px',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-              className="header-left"
-            >
-              <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Toolbar disableGutters sx={{ justifyContent: 'space-between', width: '100%' }}>
+            <Box display="flex" alignItems="center">
+              <AddIcCallIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }} />
               <Navigation />
-            </div>
+            </Box>
             {isLoggedIn ? (
-              <div
-                style={{
-                  width: '100%',
+              <Box
+                sx={{
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
+                  width: '100%',
                 }}
               >
                 <PrivateRoute
@@ -59,7 +47,7 @@ const Header = () => {
                   component={<Link to="/contacts">Contacts</Link>}
                 />
                 <UserMenu />
-              </div>
+              </Box>
             ) : (
               <AuthNav />
             )}
@@ -68,7 +56,8 @@ const Header = () => {
         </Container>
       </AppBar>
     </Box>
-    </>
   );
 };
+
 export default Header;
+

@@ -6,6 +6,7 @@ import { PrivateRoute } from 'components/PrivateRoute';
 import { RestrictedRoute } from 'components/RestrictedRoute';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks/hooks';
+import Container from '@mui/material/Container';
 
 const HomePage = lazy(() => import('pages/Home'));
 const RegisterPage = lazy(() => import('pages/Register'));
@@ -24,6 +25,7 @@ export const App = () => {
     <b>Refreshing user...</b>
   ) : (
     <div>
+      <Container maxWidth="m">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -54,6 +56,7 @@ export const App = () => {
           />
         </Route>
       </Routes>
+      </Container>
     </div>
   );
 };

@@ -15,8 +15,10 @@ const styles = {
       textAlign: 'center',
     },
   };
-  
+ 
+ 
   export default function Home() {
+    
     const { isLoggedIn } = useAuth();
     return (
       <div style={{textAlign: 'center'}}>
